@@ -3,28 +3,29 @@ package com.example.teamproject;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
-import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CursorAdapter;
-import android.widget.ListView;
-import android.widget.SimpleCursorAdapter;
 
 public class MainActivity extends AppCompatActivity {
 
     MyDBOpenHelper mydb;
     SQLiteDatabase mdb;
 
-    Button btBlankGame, btTriGame, btDB;
+    Button btTriGame, btDB;
+    Button bt1, bt3, bt4, bt5, bt6;
+
 
     final int RQCodeBlankGame = 1;
     final int RQCodeTriGame = 2;
+    final int RQCode3= 3;
+    final int RQCode4 = 4;
+    final int RQCode5 = 5;
+    final int RQCode6 = 6;
 
 
     @Override
@@ -35,16 +36,39 @@ public class MainActivity extends AppCompatActivity {
         mydb = new MyDBOpenHelper(this, "mydb.db", null, 1);
         mdb = mydb.getWritableDatabase();
 
-        btBlankGame = findViewById(R.id.bt1);
+        bt1 = findViewById(R.id.bt1);
         btTriGame = findViewById(R.id.bt2);
-        btDB = findViewById(R.id.bt3);
+        btDB = findViewById(R.id.btdb);
 
-        btBlankGame.setOnClickListener(new View.OnClickListener() {
+        bt3 = findViewById(R.id.bt3);
+        bt4 = findViewById(R.id.bt4);
+        bt5 = findViewById(R.id.bt5);
+        bt6 = findViewById(R.id.bt6);
+
+        bt3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i2 = new Intent();
-                i2.setClass(MainActivity.this, BlankGame.class);
-                startActivityForResult(i2, RQCodeBlankGame);
+                Intent i = new Intent();
+                i.setClass(MainActivity.this, MemoryGame_Chae.class);
+                startActivityForResult(i, RQCode3);
+            }
+        });
+
+        bt4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent();
+                i.setClass(MainActivity.this, CardGame_Kang.class);
+                startActivityForResult(i, RQCode4);
+            }
+        });
+
+        bt6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent();
+                i.setClass(MainActivity.this, SameNumberGame_Hojin.class);
+                startActivityForResult(i, RQCode4);
             }
         });
 
@@ -81,7 +105,10 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-
+     // bt5 김도균
+    public void startGame(View view) {
+        setContentView(new AnimalGame_DoGyun(this));
+    }
 }
 
 

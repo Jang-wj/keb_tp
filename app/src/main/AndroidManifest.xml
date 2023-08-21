@@ -12,7 +12,28 @@
         android:theme="@style/Theme.TeamProject"
         tools:targetApi="31">
         <activity
-            android:name=".Eval"
+            android:name=".SameNumberGame_Hojin"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".AnimalGame_DoGyun"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".CardGame_Kang"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".MemoryGame_Chae"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

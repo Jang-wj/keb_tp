@@ -26,7 +26,7 @@
                     android:id="@+id/bt1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="BlankGame">
+                    android:text="김도훈">
                 </Button>
 
 
@@ -34,18 +34,55 @@
                     android:id="@+id/bt2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="TriangleGame">
+                    android:text="장우정">
 
                 </Button>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/bt3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="채민경"/>
+
+                <Button
+                    android:id="@+id/bt4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="강희승">
+                </Button>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/bt5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="startGame"
+                    android:text="김도균">
+                </Button>
+
+                <Button
+                    android:id="@+id/bt6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="김호진"/>
             </TableRow>
         </TableLayout>
 
         <Button
-            android:id="@+id/bt3"
+            android:id="@+id/btdb"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/tableLayout"
-            android:text="DB">
+            android:text="RESULT">
 
         </Button>
 
